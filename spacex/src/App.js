@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {gql, ApolloProvider, InMemoryCache, ApolloClient} from 'apollo/client'
 
 function App() {
   return (
