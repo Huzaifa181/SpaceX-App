@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {gql, ApolloProvider, InMemoryCache, ApolloClient} from 'apollo/client'
+import {gql, ApolloProvider, InMemoryCache, ApolloClient} from '@apollo/client'
 
 const client = new ApolloClient({
   uri: 'https://spacexdata.herokuapp.com/graphql',
