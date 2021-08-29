@@ -6,19 +6,21 @@ interface Props{
     data: LaunchListQuery;
 }
 
-const Launch: React.FC<Props> = {{data}} =>{
-    <div className="Launches">
+const Launch: React.FC<Props>=({data})=>{
+    return (
+        <div className="Launches">
         <h3>All SpaceX Launches</h3>
         <ol className="LaunchesOL">
             {!!data.launches && data.launches.map((launch, i)=>{
                 return !!launch && (
                     <li key={i} className="LaunchesItem">
-                        {launch.mission_name} - {launch.launch_year} ({launch.launch_success})
+                        {launch.mission_name} - {launch.launch_year}
                     </li>
                 )
             })}
         </ol>
     </div>
+    )
 }
 
 export default Launch
